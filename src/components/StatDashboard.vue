@@ -28,6 +28,5 @@ export default {
   @apply flex-wrap;
   @apply grid-cols-3;
   @apply gap-2;
-  @apply bg-gray-900;
 }
 </style>

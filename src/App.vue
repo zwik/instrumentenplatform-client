@@ -1,6 +1,11 @@
 <template>
   <div id="app">
-    <Home />
+    <div class="wrapper">
+      <div class="background"></div>
+      <div class="content">
+        <Home />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -16,9 +21,25 @@ export default {
 
 <style lang="postcss">
 body {
+  @apply m-0;
+}
+
+.background {
+  @apply fixed;
+  @apply z-0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/HalleyAchtergrond.jpg");
+  @apply bg-cover;
+}
+
+.content {
+  @apply fixed;
   margin: 0 auto;
-  max-width: 985px;
-  @apply bg-gray-900;
+  min-width: 985px;
+  @apply z-10;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 #app {
