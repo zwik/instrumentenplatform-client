@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="wrapper">
-      <div class="background"></div>
+      <div class="background" />
       <div class="content">
         <Home />
       </div>
