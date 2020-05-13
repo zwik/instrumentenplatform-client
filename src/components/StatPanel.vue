@@ -21,6 +21,12 @@ export default {
   @apply bg-opacity-60;
   min-width: 315px;
   max-width: 315px;
+}
+
+.inner {
+  @apply text-gray-100;
+  @apply m-2;
+  width: 100%;
   height: 175px;
 }
 </style>
