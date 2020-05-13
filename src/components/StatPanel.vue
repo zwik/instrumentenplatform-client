@@ -17,9 +17,8 @@ export default {
   @apply flex;
   @apply items-center;
   @apply justify-center;
-  @apply bg-gray-700;
+  @apply bg-gray-800;
   @apply bg-opacity-60;
-  @apply rounded-lg;
   min-width: 315px;
   max-width: 315px;
   height: 175px;

@@ -26,7 +26,9 @@ export default {
   @apply flex;
   @apply flex-row;
   @apply flex-wrap;
+  @apply grid;
   @apply grid-cols-3;
-  @apply gap-2;
+  @apply gap-4;
+  @apply mt-4;
 }
 </style>

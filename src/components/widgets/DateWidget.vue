@@ -1,8 +1,10 @@
 <template>
   <div class="date-widget">
-    Current date: {{ currentDate }} <br />
-    Julian date: {{ currentJulian.toFixed(5) }} <br />
-    Sidereal: {{ currentSidereal }}
+    <div class="inner">
+      Current date: {{ currentDate }} <br />
+      Julian date: {{ currentJulian.toFixed(5) }} <br />
+      Sidereal: {{ currentSidereal }}
+    </div>
   </div>
 </template>
 
@@ -83,11 +85,16 @@ export default {
   @apply flex;
   @apply items-center;
   @apply justify-center;
-  @apply bg-gray-700;
+  @apply bg-gray-800;
   @apply bg-opacity-60;
-  @apply rounded-lg;
   min-width: 315px;
   max-width: 315px;
   height: 175px;
+}
+
+.inner {
+  @apply text-gray-100;
+  width: 100%;
+  height: 100%
 }
 </style>
