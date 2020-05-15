@@ -19,8 +19,8 @@ export default {
   @apply justify-center;
   @apply bg-gray-800;
   @apply bg-opacity-60;
-  min-width: 315px;
-  max-width: 315px;
+  min-width: 350px;
+  max-width: 350px;
 }
 
 .inner {

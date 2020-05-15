@@ -24,8 +24,6 @@ export default {
 <style lang="postcss" scoped>
 .dashboard {
   @apply flex;
-  @apply flex-row;
-  @apply flex-wrap;
   @apply grid;
   @apply grid-cols-3;
   @apply gap-4;

@@ -36,7 +36,7 @@ body {
 .content {
   @apply fixed;
   margin: 0 auto;
-  min-width: 985px;
+  min-width: 1080px;
   @apply z-10;
   left: 50%;
   transform: translateX(-50%);

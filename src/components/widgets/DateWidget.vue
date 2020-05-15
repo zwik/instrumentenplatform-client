@@ -1,9 +1,32 @@
 <template>
   <div class="date-widget">
+    <div class="title">Datum en tijd</div>
     <div class="inner">
-      Current date: {{ currentDate }} <br />
-      Julian date: {{ currentJulian.toFixed(5) }} <br />
-      Sidereal: {{ currentSidereal }}
+      <div class="inner-wrapper">
+        <div class="left">
+          <div class="time">
+            {{ time }}<br />
+          </div>
+          <div class="date">
+            {{ day }} {{ date }}
+          </div>
+        </div>
+        <div class="right">
+          klok
+        </div>
+      </div>
+      <div class="footer">
+        <div class="label">
+          UT:<br />
+          JD:<br />
+          LST:
+        </div>
+        <div class="value">
+          {{ ut }}<br />
+          {{ currentJulian.toFixed(5)}}<br />
+          {{ currentSidereal }}
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -17,6 +40,43 @@ export default {
       currentJulian: null,
       currentSidereal: null,
     };
+  },
+  computed: {
+    ut() {
+      let ut = `${this.currentDate.getUTCHours()}:`;
+      if (this.currentDate.getUTCMinutes() >= 10) {
+        ut += `${this.currentDate.getUTCMinutes()}:`;
+      } else {
+        ut += `0${this.currentDate.getUTCMinutes()}:`;
+      }
+      if (this.currentDate.getUTCSeconds() >= 10) {
+        ut += this.currentDate.getUTCSeconds();
+      } else {
+        ut += `0${this.currentDate.getUTCSeconds()}`;
+      }
+      return ut;
+    },
+    time() {
+      let time = `${this.currentDate.getHours()}:`;
+      if (this.currentDate.getMinutes() >= 10) {
+        time += `${this.currentDate.getMinutes()}:`;
+      } else {
+        time += `0${this.currentDate.getMinutes()}:`;
+      }
+      if (this.currentDate.getSeconds() >= 10) {
+        time += this.currentDate.getSeconds();
+      } else {
+        time += `0${this.currentDate.getSeconds()}`;
+      }
+      return time;
+    },
+    day() {
+      const days = ['zondag', 'maandag', 'dinsdag', 'woensdag', 'donderdag', 'vrijdag', 'zaterdag'];
+      return days[this.currentDate.getDay()];
+    },
+    date() {
+      return `${this.currentDate.getDate()}-${this.currentDate.getMonth()}-${this.currentDate.getFullYear()}`;
+    },
   },
   methods: {
     updateTime() {
@@ -87,14 +147,61 @@ export default {
   @apply justify-center;
   @apply bg-gray-800;
   @apply bg-opacity-60;
-  min-width: 315px;
-  max-width: 315px;
+  min-width: 350px;
+  max-width: 350px;
+}
+
+.title {
+  writing-mode: sideways-lr;
+  text-orientation: sideways;
+  @apply text-gray-400;
+  @apply mx-2;
 }
 
 .inner {
-  @apply text-gray-100;
+  @apply flex;
+  @apply flex-col;
+  @apply text-gray-400;
   @apply m-2;
   width: 100%;
   height: 175px;
+}
+
+.inner-wrapper {
+  @apply flex;
+  @apply flex-grow;
+}
+
+.left {
+  width: 100%;
+}
+
+.right {
+  @apply bg-blue-400;
+}
+
+.footer {
+  @apply flex;
+  @apply flex-row;
+  @apply text-left;
+  width: 100%;
+}
+
+.label {
+  @apply flex-grow;
+}
+
+.value {
+  @apply flex-grow;
+}
+
+.time {
+  @apply text-left;
+  @apply text-4xl;
+}
+
+.date {
+  @apply text-left;
+  @apply text-xl;
 }
 </style>
