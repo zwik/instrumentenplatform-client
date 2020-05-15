@@ -75,7 +75,7 @@ export default {
       return days[this.currentDate.getDay()];
     },
     date() {
-      return `${this.currentDate.getDate()}-${this.currentDate.getMonth()}-${this.currentDate.getFullYear()}`;
+      return `${this.currentDate.getDate()}-${this.currentDate.getMonth() + 1}-${this.currentDate.getFullYear()}`;
     },
   },
   methods: {
