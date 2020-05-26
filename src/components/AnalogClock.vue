@@ -28,7 +28,6 @@ export default {
   },
   mounted() {
     this.canvas = this.$refs.canvas;
-    // this.canvas = document.getElementById('canvas');
     this.ctx = this.canvas.getContext('2d');
     this.clearCanvas();
     this.drawClock();
@@ -51,7 +50,6 @@ export default {
       this.ctx.strokeStyle = 'white';
       this.ctx.lineWidth = 5;
       this.ctx.stroke();
-      console.log(this.canvas.width);
     },
     centerDial() {
       this.ctx.beginPath();

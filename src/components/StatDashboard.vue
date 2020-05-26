@@ -1,6 +1,7 @@
 <template>
   <div class="dashboard">
     <DateWidget />
+    <MoonWidget />
     <StatPanel>temperature</StatPanel>
     <StatPanel>rain</StatPanel>
     <StatPanel>visibility</StatPanel>
@@ -11,12 +12,14 @@
 <script>
 import StatPanel from '@/components/StatPanel.vue';
 import DateWidget from '@/components/widgets/DateWidget.vue';
+import MoonWidget from '@/components/widgets/MoonWidget.vue';
 
 export default {
   name: 'StatDashboard',
   components: {
     StatPanel,
     DateWidget,
+    MoonWidget,
   },
 };
 </script>
