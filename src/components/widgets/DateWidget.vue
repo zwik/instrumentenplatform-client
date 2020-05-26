@@ -12,7 +12,7 @@
           </div>
         </div>
         <div class="right">
-          klok
+          <AnalogClock :time="currentDate" />
         </div>
       </div>
       <div class="footer">
@@ -67,11 +67,13 @@
 
 <script>
 import ModalWindow from '@/components/ModalWindow.vue';
+import AnalogClock from '@/components/AnalogClock.vue';
 
 export default {
   name: 'DateWidget',
   components: {
     ModalWindow,
+    AnalogClock,
   },
   data() {
     return {
@@ -117,6 +119,10 @@ export default {
     date() {
       return `${this.currentDate.getDate()}-${this.currentDate.getMonth() + 1}-${this.currentDate.getFullYear()}`;
     },
+  },
+  created() {
+    this.updateTime();
+    setInterval(() => this.updateTime(), 1000);
   },
   methods: {
     updateTime() {
@@ -173,10 +179,6 @@ export default {
       return sidereal;
     },
   },
-  created() {
-    this.updateTime();
-    setInterval(() => this.updateTime(), 1000);
-  },
 };
 </script>
 
@@ -217,7 +219,7 @@ export default {
 }
 
 .right {
-  @apply bg-blue-400;
+  /* @apply bg-blue-400; */
 }
 
 .footer {
