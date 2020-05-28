@@ -47,7 +47,7 @@ export default {
       this.ctx.beginPath();
       this.ctx.arc(this.canvas.width / 2, this.canvas.height / 2,
         this.secHandLength + 10, 0, Math.PI * 2);
-      this.ctx.strokeStyle = 'white';
+      this.ctx.strokeStyle = '#cbd5e0';
       this.ctx.lineWidth = 5;
       this.ctx.stroke();
     },
@@ -55,8 +55,8 @@ export default {
       this.ctx.beginPath();
       this.ctx.arc(this.canvas.width / 2, this.canvas.height / 2, 2, 2, 0, Math.PI * 2);
       this.ctx.lineWidth = 3;
-      this.ctx.fillStyle = 'white';
-      this.ctx.strokeStyle = 'white';
+      this.ctx.fillStyle = '#cbd5e0';
+      this.ctx.strokeStyle = '#cbd5e0';
       this.ctx.stroke();
     },
     showSeconds() {
@@ -69,7 +69,7 @@ export default {
       this.ctx.lineTo((this.canvas.width / 2 + Math.cos(angle) * this.secHandLength),
         this.canvas.height / 2 + Math.sin(angle) * this.secHandLength);
 
-      this.ctx.strokeStyle = 'white';
+      this.ctx.strokeStyle = '#cbd5e0';
       this.ctx.stroke();
     },
     showMinutes() {
@@ -82,7 +82,7 @@ export default {
       this.ctx.lineTo((this.canvas.width / 2 + Math.cos(angle) * (this.secHandLength / 1.1)),
         this.canvas.height / 2 + Math.sin(angle) * (this.secHandLength / 1.1));
 
-      this.ctx.strokeStyle = 'white';
+      this.ctx.strokeStyle = '#cbd5e0';
       this.ctx.stroke();
     },
     showHours() {
@@ -95,7 +95,7 @@ export default {
       this.ctx.moveTo(this.canvas.width / 2, this.canvas.height / 2);
       this.ctx.lineTo((this.canvas.width / 2 + Math.cos(angle) * (this.secHandLength / 1.5)),
         this.canvas.height / 2 + Math.sin(angle) * (this.secHandLength / 1.5));
-      this.ctx.strokeStyle = 'white';
+      this.ctx.strokeStyle = '#cbd5e0';
       this.ctx.stroke();
     },
   },
