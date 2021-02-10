@@ -1,13 +1,24 @@
 {
-  "name": "hdashboard",
+  "name": "instrumentenplatform-client",
   "version": "0.1.0",
-  "private": true,
+  "description": "Instrumentenplatform frontend",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
+  "keywords": [
+    "instrumentenplatform",
+    "halley",
+    "apollo",
+    "vue"
+  ],
+  "author": {
+    "name": "Marcel van den Bosch",
+    "email": "m.v.d.bosch@gmail.com"
+  },
+  "license": "MIT",
   "dependencies": {
     "core-js": "^3.6.4",
     "vue": "^2.6.11",
