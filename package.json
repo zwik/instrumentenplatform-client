@@ -2,26 +2,21 @@
   "name": "instrumentenplatform-client",
   "version": "0.1.0",
   "description": "Instrumentenplatform frontend",
+  "author": {
+    "name": "Marcel van den Bosch",
+    "email": "m.v.d.bosch@gmail.com"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
-  "keywords": [
-    "instrumentenplatform",
-    "halley",
-    "apollo",
-    "vue"
-  ],
-  "author": {
-    "name": "Marcel van den Bosch",
-    "email": "m.v.d.bosch@gmail.com"
-  },
-  "license": "MIT",
   "dependencies": {
     "core-js": "^3.6.4",
+    "graphql-tag": "^2.11.0",
     "vue": "^2.6.11",
+    "vue-apollo": "^3.0.0-beta.11",
     "vue-router": "^3.1.6",
     "vuex": "^3.1.3"
   },
@@ -37,6 +32,14 @@
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-vue": "^7.1.0",
     "tailwindcss": "^1.4.1",
+    "vue-cli-plugin-apollo": "~0.22.2",
     "vue-template-compiler": "^2.6.11"
-  }
+  },
+  "keywords": [
+    "instrumentenplatform",
+    "halley",
+    "apollo",
+    "vue"
+  ],
+  "license": "MIT"
 }
