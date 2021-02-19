@@ -1,7 +1,11 @@
 <template>
   <div class="temperature-widget">
-    <div class="title" @click="toggleChart = !toggleChart">Temperatuur</div>
-    <div class="inner">
+    <div class="outer" @click="toggleModal = !toggleModal">
+      <div class="title">
+        Temperatuur
+      </div>
+    </div>
+    <div class="inner" @click="toggleChart = !toggleChart">
       <div class="inner-wrapper">
         <div class="now label">
           Nu
@@ -25,9 +29,14 @@
         </div>
       </div>
     </div>
-    <TemperatureChart v-if="toggleChart" @closed="onCloseChart"/>
-    <ModalWindow v-if="toggleModal">
-      <p>Uitleg</p>
+    <TemperatureChart v-if="toggleChart" @closed="onCloseChart" />
+    <ModalWindow v-if="toggleModal" @closed="onCloseModal">
+      <h3>Werkelijke temperatuur</h3>
+      <p>De werkelijke temperatuur is de temperatuur zoals gemeten inhet weerstation</p>
+      <h3>Gevoelstemperatuur</h3>
+      <p>De gevoelstemperatuur wordt berekend door ....</p>
+      <h3>Dauwpunt</h3>
+      <p>Het dauwpunt wordt berekend door ....</p>
     </ModalWindow>
   </div>
 </template>
@@ -78,6 +87,9 @@ export default {
     onCloseChart() {
       this.toggleChart = false;
     },
+    onCloseModal() {
+      this.toggleModal = false;
+    },
   },
 };
 </script>
@@ -93,11 +105,18 @@ export default {
   max-width: 350px;
 }
 
-.title {
-  writing-mode: sideways-lr;
-  text-orientation: sideways;
+.outer {
   @apply text-gray-400;
   @apply mx-2;
+
+}
+
+.title {
+  @apply justify-center;
+  @apply flex;
+  @apply transform;
+  @apply -rotate-90;
+  width: 30px;
 }
 
 .inner {
