@@ -36,7 +36,7 @@ Vue.use(VueApexCharts);
 Vue.component('apexchart', VueApexCharts);
 
 export default {
-  name: 'TemperatureWidget',
+  name: 'TemperatureWidget1',
   data() {
     return {
       werkelijk: 0,
