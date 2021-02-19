@@ -4,45 +4,25 @@
       <div class="inner">
         <div id="chart">
           <div class="toolbar">
-            <button
-              id="one_month"
-              @click="updateData('one_month')"
+            <button  id="one_month" @click="updateData('one_month')"
               :class="{ active: selection === 'one_month' }"
-            >
-              1M
-            </button>
+            > 1 Maand </button>
 
-            <button
-              id="six_months"
-              @click="updateData('six_months')"
+            <button id="six_months" @click="updateData('six_months')"
               :class="{ active: selection === 'six_months' }"
-            >
-              6M
-            </button>
+            > 6 Maanden </button>
 
-            <button
-              id="one_year"
-              @click="updateData('one_year')"
+            <button id="one_year" @click="updateData('one_year')"
               :class="{ active: selection === 'one_year' }"
-            >
-              1Y
-            </button>
+            > 1 Jaar </button>
 
-            <button
-              id="ytd"
-              @click="updateData('ytd')"
+            <button id="ytd" @click="updateData('ytd')"
               :class="{ active: selection === 'ytd' }"
-            >
-              YTD
-            </button>
+            > Dit jaar </button>
 
-            <button
-              id="all"
-              @click="updateData('all')"
+            <button id="all" @click="updateData('all')"
               :class="{ active: selection === 'all' }"
-            >
-              ALL
-            </button>
+            > Alles </button>
           </div>
 
           <div id="chart-timeline">
@@ -74,6 +54,7 @@ export default {
     return {
       series: [
         {
+          name: 'temperatuur',
           data: [
             [1327359600000, 30.95],
             [1327446000000, 31.34],
@@ -365,33 +346,33 @@ export default {
         },
         annotations: {
           yaxis: [
-            {
-              y: 30,
-              borderColor: '#999',
-              label: {
-                show: true,
-                text: 'Support',
-                style: {
-                  color: '#fff',
-                  background: '#00E396',
-                },
-              },
-            },
+            // {
+            //   y: 30,
+            //   borderColor: '#999',
+            //   label: {
+            //     show: true,
+            //     text: 'Support',
+            //     style: {
+            //       color: '#fff',
+            //       background: '#00E396',
+            //     },
+            //   },
+            // },
           ],
           xaxis: [
-            {
-              x: new Date('14 Nov 2012').getTime(),
-              borderColor: '#999',
-              yAxisIndex: 0,
-              label: {
-                show: true,
-                text: 'Rally',
-                style: {
-                  color: '#fff',
-                  background: '#775DD0',
-                },
-              },
-            },
+            // {
+            //   x: new Date('14 Nov 2012').getTime(),
+            //   borderColor: '#999',
+            //   yAxisIndex: 0,
+            //   label: {
+            //     show: true,
+            //     text: 'Rally',
+            //     style: {
+            //       color: '#fff',
+            //       background: '#775DD0',
+            //     },
+            //   },
+            // },
           ],
         },
         dataLabels: {
