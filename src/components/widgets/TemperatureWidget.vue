@@ -64,8 +64,6 @@ export default {
   },
   async created() {
     const resp = await fetch(
-      // 'https://api.jsonbin.io/b/60292cf53b303d3d96508264', {
-      // 'https://api.jsonbin.io/b/602955f287173a3d2f5d1739/1', {
       'https://api.jsonbin.io/b/602f96f7a3e9f25d023c1849', {
         headers: {
           'secret-key': '$2b$10$va8vvcs6BN3oUSCHprem3unLlXThIIdQVk1xp2xKcbkmHrytdsFwW',

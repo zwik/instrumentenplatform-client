@@ -16,7 +16,7 @@ import StatPanel from '@/components/StatPanel.vue';
 import DateWidget from '@/components/widgets/DateWidget.vue';
 import MoonWidget from '@/components/widgets/MoonWidget.vue';
 import GraphqlWidget from '@/components/widgets/GraphqlWidget.vue';
-import TemperatureWidget from './widgets/TemperatureWidget.vue';
+import TemperatureWidget from '@/components/widgets/TemperatureWidget.vue';
 
 export default {
   name: 'StatDashboard',
