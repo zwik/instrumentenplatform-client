@@ -3,6 +3,7 @@
     <DateWidget />
     <MoonWidget />
     <GraphqlWidget />
+    <TemperatureWidget />
     <StatPanel>temperature</StatPanel>
     <StatPanel>rain</StatPanel>
     <StatPanel>visibility</StatPanel>
@@ -15,6 +16,7 @@ import StatPanel from '@/components/StatPanel.vue';
 import DateWidget from '@/components/widgets/DateWidget.vue';
 import MoonWidget from '@/components/widgets/MoonWidget.vue';
 import GraphqlWidget from '@/components/widgets/GraphqlWidget.vue';
+import TemperatureWidget from '@/components/widgets/TemperatureWidget.vue';
 
 export default {
   name: 'StatDashboard',
@@ -23,6 +25,7 @@ export default {
     DateWidget,
     MoonWidget,
     GraphqlWidget,
+    TemperatureWidget,
   },
 };
 </script>
