@@ -3,7 +3,7 @@
     <div class="wrapper">
       <div class="inner">
         <slot />
-        <button class="close">sluiten</button>
+        <button class="close" @click="close">sluiten</button>
       </div>
     </div>
   </div>
@@ -11,7 +11,11 @@
 
 <script>
 export default {
-
+  methods: {
+    close() {
+      this.$emit('closed', 'closed');
+    },
+  },
 };
 </script>
 
