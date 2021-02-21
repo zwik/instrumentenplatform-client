@@ -107,8 +107,8 @@ export default {
 }
 
 .title {
-  writing-mode: sideways-lr;
-  text-orientation: sideways;
+  @apply transform;
+  @apply -rotate-90;
   @apply text-gray-400;
   @apply mx-2;
 }

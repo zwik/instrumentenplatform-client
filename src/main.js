@@ -1,7 +1,7 @@
 import Vue from 'vue';
+import VueApexCharts from 'vue-apexcharts';
 import App from './App.vue';
 import { createProvider } from './vue-apollo';
-import VueApexCharts from 'vue-apexcharts';
 
 Vue.config.productionTip = false;
 
