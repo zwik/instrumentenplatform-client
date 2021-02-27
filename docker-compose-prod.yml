@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+
+  instrumentenplatform-prod:
+    container_name: instrumentenplatform-prod
+    build:
+      context: .
+      dockerfile: dockerfile-prod
+    ports:
+      - '80:80'
