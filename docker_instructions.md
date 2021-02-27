@@ -8,7 +8,7 @@ docker build -t instrumentenplatform:dev
 ```
 
 ## run
-````
+```
 docker run -v ${PWD}:/app -v /app/node_modules -p 8081:8080 --rm instrumentenplatform:dev
 ```
 {PWD} may not work on Windows. See this Stack Overflow question for more info.
