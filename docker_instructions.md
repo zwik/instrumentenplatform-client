@@ -1,14 +1,15 @@
 # Build and run in DEV-mode
-Container has hot-reload. So every change in code will hav an immediate response in the browswer.
+Container has hot-reload. So every change in code will have an immediate response in the browswer.
 Open with: localhost:8081
 
 ## build
+ PS: vergeet de punt op het einde van het commando niet !
 ```
-docker build -t instrumentenplatform:dev
+docker build -t instrumentenplatform:dev .
 ```
 
 ## run
-````
+```
 docker run -v ${PWD}:/app -v /app/node_modules -p 8081:8080 --rm instrumentenplatform:dev
 ```
 {PWD} may not work on Windows. See this Stack Overflow question for more info.
@@ -21,7 +22,7 @@ docker-compose up -d --build
 ```
 stop with
 ```
-docker-compose stop
+docker-compose down
 ```
 
 # PRODUCTION
