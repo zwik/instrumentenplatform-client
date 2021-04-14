@@ -3,7 +3,12 @@
     <div class="wrapper">
       <div class="inner">
         <slot />
-        <button class="close" @click="close">sluiten</button>
+        <button
+          class="close"
+          @click="close"
+        >
+          sluiten
+        </button>
       </div>
     </div>
   </div>

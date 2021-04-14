@@ -6,7 +6,7 @@ import { createProvider } from './vue-apollo';
 Vue.config.productionTip = false;
 
 Vue.use(VueApexCharts);
-Vue.component('apexchart', VueApexCharts);
+Vue.component('Apexchart', VueApexCharts);
 
 new Vue({
   apolloProvider: createProvider(),

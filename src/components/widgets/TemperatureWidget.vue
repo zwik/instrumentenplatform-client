@@ -1,11 +1,17 @@
 <template>
   <div class="temperature-widget">
-    <div class="outer" @click="toggleModal = !toggleModal">
+    <div
+      class="outer"
+      @click="toggleModal = !toggleModal"
+    >
       <div class="title">
         Temperatuur
       </div>
     </div>
-    <div class="inner" @click="toggleChart = !toggleChart">
+    <div
+      class="inner"
+      @click="toggleChart = !toggleChart"
+    >
       <div class="inner-wrapper">
         <div class="now label">
           Nu
@@ -16,21 +22,27 @@
       </div>
       <div class="footer">
         <div class="label">
-          gevoel: <br />
-          dauwpunt: <br />
-          min: <br />
+          gevoel: <br>
+          dauwpunt: <br>
+          min: <br>
           max:
         </div>
         <div class="value">
-          {{ gevoel.toFixed(2) }} °C<br />
-          {{ dauwpunt.toFixed(2) }} °C<br />
-          {{ min.toFixed(2) }} °C<br />
+          {{ gevoel.toFixed(2) }} °C<br>
+          {{ dauwpunt.toFixed(2) }} °C<br>
+          {{ min.toFixed(2) }} °C<br>
           {{ max.toFixed(2) }} °C
         </div>
       </div>
     </div>
-    <TemperatureChart v-if="toggleChart" @closed="onCloseChart" />
-    <ModalWindow v-if="toggleModal" @closed="onCloseModal">
+    <TemperatureChart
+      v-if="toggleChart"
+      @closed="onCloseChart"
+    />
+    <ModalWindow
+      v-if="toggleModal"
+      @closed="onCloseModal"
+    >
       <h3>Werkelijke temperatuur</h3>
       <p>De werkelijke temperatuur is de temperatuur zoals gemeten inhet weerstation</p>
       <h3>Gevoelstemperatuur</h3>

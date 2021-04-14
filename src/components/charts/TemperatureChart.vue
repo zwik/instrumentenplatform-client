@@ -3,50 +3,86 @@
     <div class="wrapper">
       <div class="inner">
         <div id="chart">
-
           <div class="toolbar">
-            <button  id="one_month" @click="updateData('one_month')"
+            <button
+              id="one_month"
               :class="{ active: selection === 'one_month' }"
-            > 1 Maand </button>
+              @click="updateData('one_month')"
+            >
+              1 Maand
+            </button>
 
-            <button id="six_months" @click="updateData('six_months')"
+            <button
+              id="six_months"
               :class="{ active: selection === 'six_months' }"
-            > 6 Maanden </button>
+              @click="updateData('six_months')"
+            >
+              6 Maanden
+            </button>
 
-            <button id="one_year" @click="updateData('one_year')"
+            <button
+              id="one_year"
               :class="{ active: selection === 'one_year' }"
-            > 1 Jaar </button>
+              @click="updateData('one_year')"
+            >
+              1 Jaar
+            </button>
 
-            <button id="ytd" @click="updateData('ytd')"
+            <button
+              id="ytd"
               :class="{ active: selection === 'ytd' }"
-            > Dit jaar </button>
+              @click="updateData('ytd')"
+            >
+              Dit jaar
+            </button>
 
-            <button id="all" @click="updateData('all')"
+            <button
+              id="all"
               :class="{ active: selection === 'all' }"
-            > Alles </button>
+              @click="updateData('all')"
+            >
+              Alles
+            </button>
           </div>
 
           <div class="toolbar">
-            <button  id="werkelijk" @click="toggleSerie('werkelijk')"
-            > Werkelijk </button>
-            <button  id="gevoel" @click="toggleSerie('gevoel')"
-            > Gevoel </button>
-            <button  id="dauwpunt" @click="toggleSerie('dauwpunt')"
-            > Dauwpunt </button>
+            <button
+              id="werkelijk"
+              @click="toggleSerie('werkelijk')"
+            >
+              Werkelijk
+            </button>
+            <button
+              id="gevoel"
+              @click="toggleSerie('gevoel')"
+            >
+              Gevoel
+            </button>
+            <button
+              id="dauwpunt"
+              @click="toggleSerie('dauwpunt')"
+            >
+              Dauwpunt
+            </button>
           </div>
 
           <div id="chart-timeline">
             <apexchart
+              ref="chart"
               type="line"
               width="1000"
               height="500"
-              ref="chart"
               :options="chartOptions"
               :series="series"
-            ></apexchart>
+            />
           </div>
         </div>
-        <button class="close" @click="close">sluiten</button>
+        <button
+          class="close"
+          @click="close"
+        >
+          sluiten
+        </button>
       </div>
     </div>
   </div>

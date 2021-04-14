@@ -1,22 +1,28 @@
 <template>
   <div class="moon-widget">
-    <div class="title">Maan</div>
+    <div class="title">
+      Maan
+    </div>
     <div class="inner">
       <div class="inner-wrapper">
         <div class="left">
           <div class="time">
             Procentuele bedekking
-            <br />
+            <br>
           </div>
-          <div class="date">naam van bedekking</div>
+          <div class="date">
+            naam van bedekking
+          </div>
         </div>
-        <div class="right">moon phase</div>
+        <div class="right">
+          moon phase
+        </div>
       </div>
       <div class="footer">
         <div class="label">
           richting:
-          <br />hoogte:
-          <br />
+          <br>hoogte:
+          <br>
         </div>
         <div class="value">
           <!-- {{ ut }}<br />

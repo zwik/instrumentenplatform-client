@@ -1,11 +1,16 @@
 <template>
-  <div class="date-widget" @click="toggleModal = !toggleModal">
-    <div class="title">Datum en tijd</div>
+  <div
+    class="date-widget"
+    @click="toggleModal = !toggleModal"
+  >
+    <div class="title">
+      Datum en tijd
+    </div>
     <div class="inner">
       <div class="inner-wrapper">
         <div class="left">
           <div class="time">
-            {{ time }}<br />
+            {{ time }}<br>
           </div>
           <div class="date">
             {{ day }} {{ date }}
@@ -17,50 +22,50 @@
       </div>
       <div class="footer">
         <div class="label">
-          UT:<br />
-          JD:<br />
+          UT:<br>
+          JD:<br>
           LST:
         </div>
         <div class="value">
-          {{ ut }}<br />
-          {{ currentJulian.toFixed(5)}}<br />
+          {{ ut }}<br>
+          {{ currentJulian.toFixed(5) }}<br>
           {{ currentSidereal }}
         </div>
       </div>
     </div>
     <ModalWindow v-if="toggleModal">
-        <p> Tijd en datum</p>
-        <p>
-          Een dag duurt 24h, per definitie. De zon staat dus na
-          exact 24uur, op de hoogste punt opnieuw in het zuiden.
-          Deze tijd wordt ook wel een zonnedag genoemd.
-          Hierop is onze kalender gebaseerd. Zo is het nu [tijd].
-          Dit is gelijk aan [UT], de tijd bij Sterrenwacht
-          Greenwich in Londen zonder zomer- of wintertijd.
-        </p>
-        <p>
-          Om dit om te rekenen naar onze plek op aarde, is de
-          hele wereld verdeeld in [tijdszones]. De meridiaan bij
-          de Greenwich sterrenwacht is het nulpunt. Zo leven wij
-          in [UT+1h/2h] omdat wij wat oostelijker leven en nog
-          een uur vanwege de [zomertijd/wintertijd].
-        </p>
-        <p>
-          Om sterrenkundige waarnemingen over de hele wereld
-          aan elkaar te kunnen vergelijken, wordt echter gebruik
-          gemaakt van de Juliaanse Datum. Dit zijn dagen
-          gerekend vanaf 24 november 4714 v.d.g.j., 12 uur UT.
-          Een dag is niet meer verdeeld in uren, minuten en
-          seconden, maar wordt gerekend als een decimale fractie.
-        </p>
-        <p>
-          Echter, doordat de aarde om de zon draait, verschuift de
-          sterrenhemel van dag tot dag een heel klein beetje.
-          Hierdoor komt bijvoorbeeld Regulus elke dag 3m56s
-          eerder op. Hierdoor staat een ster elke 23h56m04s op
-          dezelfde plek. Deze tijd wordt ook wel een siderische
-          dag genoemd.
-        </p>
+      <p> Tijd en datum</p>
+      <p>
+        Een dag duurt 24h, per definitie. De zon staat dus na
+        exact 24uur, op de hoogste punt opnieuw in het zuiden.
+        Deze tijd wordt ook wel een zonnedag genoemd.
+        Hierop is onze kalender gebaseerd. Zo is het nu [tijd].
+        Dit is gelijk aan [UT], de tijd bij Sterrenwacht
+        Greenwich in Londen zonder zomer- of wintertijd.
+      </p>
+      <p>
+        Om dit om te rekenen naar onze plek op aarde, is de
+        hele wereld verdeeld in [tijdszones]. De meridiaan bij
+        de Greenwich sterrenwacht is het nulpunt. Zo leven wij
+        in [UT+1h/2h] omdat wij wat oostelijker leven en nog
+        een uur vanwege de [zomertijd/wintertijd].
+      </p>
+      <p>
+        Om sterrenkundige waarnemingen over de hele wereld
+        aan elkaar te kunnen vergelijken, wordt echter gebruik
+        gemaakt van de Juliaanse Datum. Dit zijn dagen
+        gerekend vanaf 24 november 4714 v.d.g.j., 12 uur UT.
+        Een dag is niet meer verdeeld in uren, minuten en
+        seconden, maar wordt gerekend als een decimale fractie.
+      </p>
+      <p>
+        Echter, doordat de aarde om de zon draait, verschuift de
+        sterrenhemel van dag tot dag een heel klein beetje.
+        Hierdoor komt bijvoorbeeld Regulus elke dag 3m56s
+        eerder op. Hierdoor staat een ster elke 23h56m04s op
+        dezelfde plek. Deze tijd wordt ook wel een siderische
+        dag genoemd.
+      </p>
     </ModalWindow>
   </div>
 </template>

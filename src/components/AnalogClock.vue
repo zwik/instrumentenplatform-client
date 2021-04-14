@@ -1,6 +1,9 @@
 <template>
-  <canvas ref="canvas" width="100px" height="100px">
-  </canvas>
+  <canvas
+    ref="canvas"
+    width="100px"
+    height="100px"
+  />
 </template>
 
 <script>
