@@ -75,13 +75,11 @@ export default {
     };
   },
   async created() {
-    const resp = await fetch(
-      'https://api.jsonbin.io/b/602f96f7a3e9f25d023c1849', {
-        headers: {
-          'secret-key': '$2b$10$va8vvcs6BN3oUSCHprem3unLlXThIIdQVk1xp2xKcbkmHrytdsFwW',
-        },
+    const resp = await fetch('https://api.jsonbin.io/b/602f96f7a3e9f25d023c1849', {
+      headers: {
+        'secret-key': '$2b$10$va8vvcs6BN3oUSCHprem3unLlXThIIdQVk1xp2xKcbkmHrytdsFwW',
       },
-    );
+    });
     const data = await resp.json();
     this.tempdata = data.temperatuur;
 

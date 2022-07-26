@@ -48,8 +48,13 @@ export default {
     },
     outerDial() {
       this.ctx.beginPath();
-      this.ctx.arc(this.canvas.width / 2, this.canvas.height / 2,
-        this.secHandLength + 10, 0, Math.PI * 2);
+      this.ctx.arc(
+        this.canvas.width / 2,
+        this.canvas.height / 2,
+        this.secHandLength + 10,
+        0,
+        Math.PI * 2,
+      );
       this.ctx.strokeStyle = '#cbd5e0';
       this.ctx.lineWidth = 5;
       this.ctx.stroke();
@@ -69,8 +74,10 @@ export default {
 
       this.ctx.beginPath();
       this.ctx.moveTo(this.canvas.width / 2, this.canvas.height / 2);
-      this.ctx.lineTo((this.canvas.width / 2 + Math.cos(angle) * this.secHandLength),
-        this.canvas.height / 2 + Math.sin(angle) * this.secHandLength);
+      this.ctx.lineTo(
+        (this.canvas.width / 2 + Math.cos(angle) * this.secHandLength),
+        this.canvas.height / 2 + Math.sin(angle) * this.secHandLength,
+      );
 
       this.ctx.strokeStyle = '#cbd5e0';
       this.ctx.stroke();
@@ -82,8 +89,10 @@ export default {
 
       this.ctx.beginPath();
       this.ctx.moveTo(this.canvas.width / 2, this.canvas.height / 2);
-      this.ctx.lineTo((this.canvas.width / 2 + Math.cos(angle) * (this.secHandLength / 1.1)),
-        this.canvas.height / 2 + Math.sin(angle) * (this.secHandLength / 1.1));
+      this.ctx.lineTo(
+        (this.canvas.width / 2 + Math.cos(angle) * (this.secHandLength / 1.1)),
+        this.canvas.height / 2 + Math.sin(angle) * (this.secHandLength / 1.1),
+      );
 
       this.ctx.strokeStyle = '#cbd5e0';
       this.ctx.stroke();
@@ -96,8 +105,10 @@ export default {
 
       this.ctx.beginPath();
       this.ctx.moveTo(this.canvas.width / 2, this.canvas.height / 2);
-      this.ctx.lineTo((this.canvas.width / 2 + Math.cos(angle) * (this.secHandLength / 1.5)),
-        this.canvas.height / 2 + Math.sin(angle) * (this.secHandLength / 1.5));
+      this.ctx.lineTo(
+        (this.canvas.width / 2 + Math.cos(angle) * (this.secHandLength / 1.5)),
+        this.canvas.height / 2 + Math.sin(angle) * (this.secHandLength / 1.5),
+      );
       this.ctx.strokeStyle = '#cbd5e0';
       this.ctx.stroke();
     },
