@@ -29,7 +29,7 @@ body {
   @apply z-0;
   width: 100%;
   height: 100%;
-  background-image: url("/HalleyAchtergrond.jpg");
+  background-image: url("@/assets/HalleyAchtergrond.jpg");
   @apply bg-cover;
 }
 
