@@ -71,8 +71,8 @@
 </template>
 
 <script>
-import ModalWindow from '@/components/ModalWindow.vue';
-import AnalogClock from '@/components/AnalogClock.vue';
+import ModalWindow from '../ModalWindow.vue';
+import AnalogClock from '../AnalogClock.vue';
 
 export default {
   name: 'DateWidget',

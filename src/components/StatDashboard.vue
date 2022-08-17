@@ -12,11 +12,11 @@
 </template>
 
 <script>
-import StatPanel from '@/components/StatPanel.vue';
-import DateWidget from '@/components/widgets/DateWidget.vue';
-import MoonWidget from '@/components/widgets/MoonWidget.vue';
-import GraphqlWidget from '@/components/widgets/GraphqlWidget.vue';
-import TemperatureWidget from '@/components/widgets/TemperatureWidget.vue';
+import StatPanel from './StatPanel.vue';
+import DateWidget from './widgets/DateWidget.vue';
+import MoonWidget from './widgets/MoonWidget.vue';
+import GraphqlWidget from './widgets/GraphqlWidget.vue';
+import TemperatureWidget from './widgets/TemperatureWidget.vue';
 
 export default {
   name: 'StatDashboard',

@@ -6,6 +6,7 @@
           <div class="toolbar">
             <button
               id="one_month"
+              type="button"
               :class="{ active: selection === 'one_month' }"
               @click="updateData('one_month')"
             >
@@ -14,6 +15,7 @@
 
             <button
               id="six_months"
+              type="button"
               :class="{ active: selection === 'six_months' }"
               @click="updateData('six_months')"
             >
@@ -22,6 +24,7 @@
 
             <button
               id="one_year"
+              type="button"
               :class="{ active: selection === 'one_year' }"
               @click="updateData('one_year')"
             >
@@ -30,6 +33,7 @@
 
             <button
               id="ytd"
+              type="button"
               :class="{ active: selection === 'ytd' }"
               @click="updateData('ytd')"
             >
@@ -38,6 +42,7 @@
 
             <button
               id="all"
+              type="button"
               :class="{ active: selection === 'all' }"
               @click="updateData('all')"
             >
@@ -48,18 +53,21 @@
           <div class="toolbar">
             <button
               id="werkelijk"
+              type="button"
               @click="toggleSerie('werkelijk')"
             >
               Werkelijk
             </button>
             <button
               id="gevoel"
+              type="button"
               @click="toggleSerie('gevoel')"
             >
               Gevoel
             </button>
             <button
               id="dauwpunt"
+              type="button"
               @click="toggleSerie('dauwpunt')"
             >
               Dauwpunt
@@ -78,6 +86,7 @@
           </div>
         </div>
         <button
+          type="button"
           class="close"
           @click="close"
         >

@@ -54,8 +54,8 @@
 </template>
 
 <script>
-import ModalWindow from '@/components/ModalWindow.vue';
-import TemperatureChart from '@/components/charts/TemperatureChart.vue';
+import ModalWindow from '../ModalWindow.vue';
+import TemperatureChart from '../charts/TemperatureChart.vue';
 
 export default {
   name: 'TemperatureWidget',

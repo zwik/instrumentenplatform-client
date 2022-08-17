@@ -4,6 +4,7 @@
       <div class="inner">
         <slot />
         <button
+          type="button"
           class="close"
           @click="close"
         >
