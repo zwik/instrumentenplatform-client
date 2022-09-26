@@ -16,7 +16,7 @@
     "apexcharts": "^3.35.5",
     "core-js": "^3.25.3",
     "graphql-tag": "^2.12.6",
-    "vue": "^2.7.10",
+    "vue": "^3.2.39",
     "vue-apexcharts": "^1.6.2",
     "vue-apollo": "^3.1.0",
     "vue-router": "^3.6.5",
