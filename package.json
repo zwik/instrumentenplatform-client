@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "apexcharts": "^3.44.0",
-    "core-js": "^3.33.2",
+    "core-js": "^3.33.3",
     "graphql-tag": "^2.12.6",
     "vue": "^2.7.15",
     "vue-apexcharts": "^1.6.2",
