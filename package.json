@@ -13,7 +13,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "apexcharts": "^3.54.0",
+    "apexcharts": "^3.54.1",
     "core-js": "^3.38.1",
     "graphql-tag": "^2.12.6",
     "vue": "^2.7.16",
